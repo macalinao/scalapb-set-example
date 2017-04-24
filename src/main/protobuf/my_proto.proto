@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package pw.ian.example;
+
+import "scalapb/scalapb.proto";
+
+message MyMessage {
+  repeated uint32 numbers = 1 [(scalapb.field).collection_type = "Set"];
+}
